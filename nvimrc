@@ -9,6 +9,10 @@ Plug 'tpope/vim-sensible'
 " Status Bar
 Plug 'vim-airline/vim-airline'
 
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " Theme
 Plug 'dikiaap/minimalist'
 
@@ -16,6 +20,25 @@ Plug 'dikiaap/minimalist'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " OCaml completion
 Plug 'copy/deoplete-ocaml'
+" Go completion
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+" Rust completion
+Plug 'sebastianmarkow/deoplete-rust'
+" Swift comppletion
+Plug 'landaire/deoplete-swift'
+" Haskell completion
+"Plug 'eagletmt/neco-ghc'
+" Javascript completion
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+" Fuzzy finder
+Plug '~/.fzf'
+
+" Go support
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Async Linting with LSP
+Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -59,6 +82,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1
+" Enable integration with airline.
+let g:airline#extensions#ale#enabled = 1
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
@@ -92,3 +117,10 @@ for tool in s:opam_packages
   endif
 endfor
 " ## end of OPAM user-setup addition for vim / base ## keep this line
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
