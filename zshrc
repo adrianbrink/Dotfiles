@@ -42,29 +42,36 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+#export LANG=en_US.UTF-8
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-alias vim="nvim"
-alias ll="ls -al"
-alias ln="ln -v"
-alias mkdir="mkdir -p"
-# Pretty print the path
-alias path='echo $PATH | tr -s ":" "\n"'
+# source aliases
+[ -s "$HOME/.aliases" ] && source "$HOME/.aliases"
 
-# Environment variables
-export VISUAL=nvim
-export EDITOR="$VISUAL"
+# gvm
+[[ -s "/Users/adrian/.gvm/scripts/gvm" ]] && source "/Users/adrian/.gvm/scripts/gvm"
+export GOPATH=$HOME/code/go-workspace
+export PATH=$PATH:$GOPATH/bin
 
 # opam configuration
-test -r /home/adrian/.opam/opam-init/init.zsh && . /home/adrian/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#test -r /home/adrian/.opam/opam-init/init.zsh && . /home/adrian/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r /Users/adrian/.opam/opam-init/init.zsh && . /Users/adrian/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+
+# swiftenv
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+
+# jabba
+[ -s "/Users/adrian/.jabba/jabba.sh" ] && source "/Users/adrian/.jabba/jabba.sh"
+
+# nix package manager
+if [ -e /Users/adrian/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/adrian/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# stack binariees
+export PATH="$PATH:$HOME/.local/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

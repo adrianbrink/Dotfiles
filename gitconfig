@@ -1,6 +1,7 @@
 [user]
 	name = Adrian Brink
 	email = adrian@cryptium.io
+	signingkey = F61053D3FBD06353
 [color]
 	ui = auto
 [alias]
@@ -18,3 +19,11 @@
 	l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %s' --decorate --abbrev-commit
 [push]
 	default = simple
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
+[credential]
+	helper = osxkeychain
+[gc]
+	autoDetach = false
