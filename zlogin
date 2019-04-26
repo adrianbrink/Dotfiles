@@ -1,5 +1,5 @@
 ## rustup.rs
-#export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 ## cocoapods
 #export GEM_HOME=$HOME/.gem

@@ -6,10 +6,10 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # sccache for rust compilation caching
-#export RUSTC_WRAPPER=sccache
+export RUSTC_WRAPPER=sccache
 
 # rust source
-#export RUST_SRC_PATH="$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
 
 # api keys
 [ -s "$HOME/.env" ] && source "$HOME/.env"
