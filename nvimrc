@@ -21,21 +21,21 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " OCaml completion
 Plug 'copy/deoplete-ocaml'
 " Go completion
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+"Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 " Rust completion
 Plug 'sebastianmarkow/deoplete-rust'
 " Swift comppletion
-Plug 'landaire/deoplete-swift'
+"Plug 'landaire/deoplete-swift'
 " Haskell completion
 "Plug 'eagletmt/neco-ghc'
 " Javascript completion
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+"Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " Fuzzy finder
 Plug '~/.fzf'
 
 " Go support
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Async Linting with LSP
 Plug 'w0rp/ale'
