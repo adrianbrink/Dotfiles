@@ -8,3 +8,6 @@ Requires:
 - Zsh and oh-my-zsh
 - Tmux
 - Neovim and vim-plugged
+- RVM
+- NVM
+- Pyenv
