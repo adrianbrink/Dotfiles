@@ -24,5 +24,5 @@ fi
 eval "$(pyenv virtualenv-init -)"
 
 # ledger development
-#export BOLOS_SDK="/Users/adrian/code/ledger/nanos-secure-sdk"
-#export BOLOS_ENV="/Users/adrian/code/ledger/bolos_env"
+export BOLOS_SDK="/Users/adrian/code/ledger/nanos-secure-sdk"
+export BOLOS_ENV="/Users/adrian/code/ledger/bolos_env"

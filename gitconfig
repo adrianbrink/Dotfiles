@@ -1,7 +1,7 @@
 [user]
 	name = Adrian Brink
 	email = adrian@cryptium.io
-#	signingkey = F61053D3FBD06353
+	signingkey = F61053D3FBD06353
 [color]
 	ui = auto
 [alias]
@@ -21,9 +21,9 @@
 	default = simple
 [pull]
 	rebase = true
-#[commit]
-#	gpgsign = true
-#[credential]
-#	helper = osxkeychain
+[commit]
+	gpgsign = true
+[credential]
+	helper = osxkeychain
 [gc]
 	autoDetach = false
