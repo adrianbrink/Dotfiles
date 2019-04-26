@@ -9,6 +9,9 @@ Plug 'tpope/vim-sensible'
 " Status Bar
 Plug 'vim-airline/vim-airline'
 
+" Theme
+Plug 'dikiaap/minimalist'
+
 " Async completion framework
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " OCaml completion
@@ -17,22 +20,44 @@ Plug 'copy/deoplete-ocaml'
 " Initialize plugin system
 call plug#end()
 
-" true colours
+" Leader
+let mapleader = " "
+
+set backspace=2   " Backspace deletes like most programs in insert mode
+set nobackup
+set nowritebackup
+set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+set history=50
+set ruler         " show the cursor position all the time
+set showcmd       " display incomplete commands
+set incsearch     " do incremental searching
+set laststatus=2  " Always display the status line
+set autowrite     " Automatically :write before running commands
+
+" Colors, Fonts, and Syntax.
+filetype plugin indent on
+syntax enable
+set t_Co=256
+set encoding=utf-8
+colorscheme minimalist
 set termguicolors
 
-" Directories.
-set backupdir=~/.local/share/nvim/backup
-set directory=~/.local/share/nvim/swap
-set undodir=~/.local/share/nvim/undo
-
 " Python providers for neovim
-let g:python_host_prog = '/home/adrian/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/home/adrian/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '/Users/adrian/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/adrian/.pyenv/versions/neovim3/bin/python'
 
 " enable deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#complete_method = "complete"
 let g:deoplete#auto_complete_delay = 0
+
+" Airline.
+let g:airline_theme='minimalist'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 1
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
