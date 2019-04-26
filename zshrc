@@ -55,5 +55,9 @@ alias mkdir="mkdir -p"
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# Environment variables
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 # opam configuration
 test -r /home/adrian/.opam/opam-init/init.zsh && . /home/adrian/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
