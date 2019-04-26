@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/adrian/.oh-my-zsh"
+export ZSH="/Users/adrian/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
@@ -44,6 +44,9 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 #export LANG=en_US.UTF-8
 
+# Fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # source aliases
 [ -s "$HOME/.aliases" ] && source "$HOME/.aliases"
 
@@ -75,3 +78,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
