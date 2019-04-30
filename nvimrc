@@ -15,6 +15,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Theme
 Plug 'dikiaap/minimalist'
+Plug 'flazz/vim-colorschemes'
 
 " Async completion framework
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -32,7 +33,7 @@ Plug 'landaire/deoplete-swift'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " Fuzzy finder
-Plug '/usr/local/opt/fzf'
+Plug '~/.fzf'
 
 " Go support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -63,7 +64,7 @@ filetype plugin indent on
 syntax enable
 set t_Co=256
 set encoding=utf-8
-colorscheme minimalist
+colorscheme material-theme
 set termguicolors
 
 " Python providers for neovim
