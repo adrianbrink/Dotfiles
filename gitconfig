@@ -25,5 +25,9 @@
 	autoDetach = false
 [commit]
 	gpgsign = true
+	template = ~/.gitmessage
 [credential]
 	helper = osxkeychain
+[core]
+	excludesfile = ~/.gitignore
+	editor = nvim
