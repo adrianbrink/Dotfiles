@@ -21,9 +21,9 @@
 	default = simple
 [pull]
 	rebase = true
+[gc]
+	autoDetach = false
 [commit]
 	gpgsign = true
 [credential]
 	helper = osxkeychain
-[gc]
-	autoDetach = false

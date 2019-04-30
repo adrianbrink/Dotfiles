@@ -1,28 +1,16 @@
-# XDG Config Home
-export XDG_CONFIG_HOME="$HOME/.config"
+# manpath
+export MANPATH="/usr/local/man:$MANPATH"
 
-# Environment variables
-export VISUAL=nvim
-export EDITOR="$VISUAL"
+# stack binariees
+export PATH="$PATH:$HOME/.local/bin"
 
-# sccache for rust compilation caching
-export RUSTC_WRAPPER=sccache
+# rustup
+export PATH="$HOME/.cargo/bin:$PATH"
 
-# rust source
-export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
+# swiftenv
+export SWIFTENV_ROOT="$HOME/.swiftenv"
+export PATH="$SWIFTENV_ROOT/bin:$PATH"
 
-# api keys
-[ -s "$HOME/.env" ] && source "$HOME/.env"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-# pyenv-virtualenv
-eval "$(pyenv virtualenv-init -)"
-
-# ledger development
-export BOLOS_SDK="/Users/adrian/code/ledger/nanos-secure-sdk"
-export BOLOS_ENV="/Users/adrian/code/ledger/bolos_env"
