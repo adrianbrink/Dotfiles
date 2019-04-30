@@ -37,6 +37,9 @@ alias vim="nvim"
 # gvm
 [[ -s "/Users/adrian/.gvm/scripts/gvm" ]] && source "/Users/adrian/.gvm/scripts/gvm"
 
+# opam
+test -r /Users/adrian/.opam/opam-init/init.zsh && . /Users/adrian/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
 # jabba
 [ -s "/Users/adrian/.jabba/jabba.sh" ] && source "/Users/adrian/.jabba/jabba.sh"
 
