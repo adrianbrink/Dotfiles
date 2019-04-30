@@ -26,7 +26,7 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
-[[ -s '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]] && source  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+[ -s '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ] && source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # aliases
 alias vim="nvim"
@@ -36,6 +36,9 @@ alias vim="nvim"
 
 # gvm
 [[ -s "/Users/adrian/.gvm/scripts/gvm" ]] && source "/Users/adrian/.gvm/scripts/gvm"
+
+# jabba
+[ -s "/Users/adrian/.jabba/jabba.sh" ] && source "/Users/adrian/.jabba/jabba.sh"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -52,4 +55,5 @@ eval "$(pyenv virtualenv-init -)"
 
 # swiftenv
 eval "$(swiftenv init -)"
+
 
