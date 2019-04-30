@@ -1,6 +1,10 @@
 # manpath
 export MANPATH="/usr/local/man:$MANPATH"
 
+# gvm
+export GOPATH=$HOME/code/go-workspace
+export PATH=$PATH:$GOPATH/bin
+
 # stack binariees
 export PATH="$PATH:$HOME/.local/bin"
 

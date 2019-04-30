@@ -30,6 +30,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # aliases
 alias vim="nvim"
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # gvm
 [[ -s "/Users/adrian/.gvm/scripts/gvm" ]] && source "/Users/adrian/.gvm/scripts/gvm"
 
@@ -48,3 +51,4 @@ eval "$(pyenv virtualenv-init -)"
 
 # swiftenv
 eval "$(swiftenv init -)"
+

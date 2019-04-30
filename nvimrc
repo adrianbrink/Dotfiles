@@ -32,7 +32,7 @@ Plug 'landaire/deoplete-swift'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " Fuzzy finder
-Plug '~/.fzf'
+Plug '/usr/local/opt/fzf'
 
 " Go support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
