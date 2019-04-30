@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+[[ -s '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]] && source  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # aliases
 alias vim="nvim"
