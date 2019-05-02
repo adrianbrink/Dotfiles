@@ -1,3 +1,6 @@
+# load config variables
+[ -s "/Users/adrian/.env" ] && source "/Users/adrian/.env"
+
 # manpath
 export MANPATH="/usr/local/man:$MANPATH"
 
@@ -10,6 +13,10 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # rustup
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 # swiftenv
 export SWIFTENV_ROOT="$HOME/.swiftenv"

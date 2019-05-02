@@ -35,7 +35,9 @@ alias vim="nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # gvm
-[[ -s "/Users/adrian/.gvm/scripts/gvm" ]] && source "/Users/adrian/.gvm/scripts/gvm"
+[ -s "/Users/adrian/.gvm/scripts/gvm" ] && source "/Users/adrian/.gvm/scripts/gvm"
+export GOPATH=$HOME/code/go-workspace
+export PATH=$PATH:$GOPATH/bin
 
 # opam
 test -r /Users/adrian/.opam/opam-init/init.zsh && . /Users/adrian/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -50,13 +52,16 @@ export NVM_DIR="$HOME/.nvm"
 # nix package manager
 if [ -e /Users/adrian/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/adrian/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+# swiftenv
+if command -v swiftenv 1>/dev/null 2>&1; then
+  eval "$(swiftenv init -)"
+fi
+
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
-eval "$(pyenv virtualenv-init -)"
-
-# swiftenv
-eval "$(swiftenv init -)"
 
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
