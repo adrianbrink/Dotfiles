@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/adrian/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -35,22 +35,22 @@ alias vim="nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # gvm
-[ -s "/Users/adrian/.gvm/scripts/gvm" ] && source "/Users/adrian/.gvm/scripts/gvm"
+[ -s "$HOME/.gvm/scripts/gvm" ] && source "$HOME/.gvm/scripts/gvm"
 export GOPATH=$HOME/code/go-workspace
 export PATH=$PATH:$GOPATH/bin
 
 # opam
-test -r /Users/adrian/.opam/opam-init/init.zsh && . /Users/adrian/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # jabba
-[ -s "/Users/adrian/.jabba/jabba.sh" ] && source "/Users/adrian/.jabba/jabba.sh"
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # nix package manager
-if [ -e /Users/adrian/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/adrian/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 # swiftenv
 if command -v swiftenv 1>/dev/null 2>&1; then
@@ -62,6 +62,3 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
-
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

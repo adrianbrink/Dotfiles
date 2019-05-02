@@ -1,5 +1,5 @@
 # load config variables
-[ -s "/Users/adrian/.env" ] && source "/Users/adrian/.env"
+[ -s "$HOME/.env" ] && source "$HOME/.env"
 
 # manpath
 export MANPATH="/usr/local/man:$MANPATH"
