@@ -46,23 +46,33 @@ values."
      version-control
      shell
      themes-megapack
+     ibuffer
+     dash
 
-     markdown
      asciidoc
-     emacs-lisp
-     common-lisp
-     ocaml
-     rust
-     go
-     python
-     swift
-     javascript
-     haskell
-     latex
      bibtex
+     c-c++
+     common-lisp
+     csv
+     emacs-lisp
+     go
+     haskell
+     html
+     idris
+     java
+     javascript
+     latex
+     markdown
+     ocaml
+     python
+     rust
+     shell-scripts
+     swift
+     typescript
 
      (shell :variables
             shell-enable-smart-eshell t)
+     (ibuffer :variables ibuffer-group-buffers-by 'projects)
 
      ;; (shell :variables
      ;;        shell-default-height 30
