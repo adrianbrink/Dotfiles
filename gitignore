@@ -1,21 +1,57 @@
 
-# Created by https://www.gitignore.io/api/vim,linux,macos
-# Edit at https://www.gitignore.io/?templates=vim,linux,macos
+# Created by https://www.gitignore.io/api/vim,emacs,macos
+# Edit at https://www.gitignore.io/?templates=vim,emacs,macos
 
-### Linux ###
+### Emacs ###
+# -*- mode: gitignore; -*-
 *~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
 
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
+# Org-mode
+.org-id-locations
+*_archive
 
-# KDE directory preferences
-.directory
+# flymake-mode
+*_flymake.*
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
+# eshell files
+/eshell/history
+/eshell/lastdir
 
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+dist/
+
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+
+# directory configuration
+.dir-locals.el
+
+# network security
+/network-security.data
+
 
 ### macOS ###
 # General
@@ -63,9 +99,5 @@ tags
 # Persistent undo
 [._]*.un~
 
-# End of https://www.gitignore.io/api/vim,linux,macos
-
-.python-version
-.vscode/
-todo.md
+# End of https://www.gitignore.io/api/vim,emacs,macos
 
