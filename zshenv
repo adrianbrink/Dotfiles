@@ -11,6 +11,9 @@ export MANPATH="/usr/local/man:$MANPATH"
 export GOPATH=$HOME/code/go-workspace
 export PATH=$PATH:$GOPATH/bin
 
+# brew installs into sbin sometimes
+export PATH="$PATH:/usr/local/sbin/"
+
 # stack binariees
 export PATH="$PATH:$HOME/.local/bin"
 
