@@ -33,8 +33,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(systemd
-     yaml
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -56,6 +55,7 @@ This function should only modify configuration layer settings."
      dash
      lsp
      osx
+     systemd
 
      asciidoc
      bibtex
@@ -77,6 +77,9 @@ This function should only modify configuration layer settings."
      shell-scripts
      swift
      typescript
+     solidity
+     yaml
+     reason
 
      (shell :variables
             shell-enable-smart-eshell t)
@@ -91,9 +94,7 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages
-   '(
-     reason-mode
-   )
+   '()
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
