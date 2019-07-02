@@ -47,7 +47,8 @@ This function should only modify configuration layer settings."
      org
      spell-checking
      syntax-checking
-     neotree
+     ;; neotree
+     treemacs
      version-control
      shell
      themes-megapack
