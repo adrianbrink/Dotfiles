@@ -28,8 +28,15 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export SWIFTENV_ROOT="$HOME/.swiftenv"
 export PATH="$SWIFTENV_ROOT/bin:$PATH"
 
+# util-linux from brew
+export PATH="/usr/local/opt/util-linux/bin:$PATH"
+export PATH="/usr/local/opt/util-linux/sbin:$PATH"
+
 # Sccache for compilation caching
 export RUSTC_WRAPPER=sccache
+
+# Racer and RLS autocompletion
+export RUST_SRC_PATH="$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

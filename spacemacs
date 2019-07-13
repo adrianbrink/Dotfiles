@@ -95,7 +95,9 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages
-   '()
+   '(
+    merlin-eldoc
+    )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -493,6 +495,16 @@ before packages are loaded."
   (setq frame-resize-pixelwise t)
   "(add-hook 'ocaml-mode-hook #'lsp-ocaml-enable)"
   "(add-hook 'rust-mode-hook #'lsp-rust-enable)"
+  ;; merlin-eldoc
+  (require 'merlin-eldoc)
+  (add-hook 'tuareg-mode-hook 'merlin-eldoc-setup)
+  (add-hook 'reason-mode-hook 'merlin-eldoc-setup)
+  ;; ocp-indent on save
+  (add-hook
+   'tuareg-mode-hook
+   (lambda ()
+     (add-hook 'before-save-hook 'ocp-indent-buffer nil t)
+     (merlin-mode)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
