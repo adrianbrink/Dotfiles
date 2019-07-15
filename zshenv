@@ -31,6 +31,7 @@ export PATH="$SWIFTENV_ROOT/bin:$PATH"
 # util-linux from brew
 export PATH="/usr/local/opt/util-linux/bin:$PATH"
 export PATH="/usr/local/opt/util-linux/sbin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Sccache for compilation caching
 export RUSTC_WRAPPER=sccache
