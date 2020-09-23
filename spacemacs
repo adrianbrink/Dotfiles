@@ -48,8 +48,6 @@ This function should only modify configuration layer settings."
      org
      treemacs
 
-     dap
-
      markdown
      javascript
      typescript
@@ -65,7 +63,8 @@ This function should only modify configuration layer settings."
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control)
+     ;; version-control
+     dap)
 
 
    ;; List of additional packages that will be installed without being
