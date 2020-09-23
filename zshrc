@@ -55,6 +55,13 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# swiftenv
+export SWIFTENV_ROOT="$HOME/.swiftenv"
+export PATH="$SWIFTENV_ROOT/bin:$PATH"
+if command -v swiftenv 1>/dev/null 2>&1; then
+  eval "$(swiftenv init -)"
+fi
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -66,3 +73,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # opam configuration
 test -r /home/tom/.opam/opam-init/init.zsh && . /home/tom/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
