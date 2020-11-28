@@ -15,8 +15,8 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
-let g:python2_host_prog = '/Users/skynet/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/skynet/.pyenv/versions/neovim3/bin/python'
+let g:python2_host_prog = '/home/sammy/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/sammy/.pyenv/versions/neovim3/bin/python'
 
 set encoding=utf-8
 
@@ -63,3 +63,4 @@ set numberwidth=5
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
