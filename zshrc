@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/skynet/.oh-my-zsh"
+export ZSH="/home/sammy/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -93,17 +93,19 @@ export LANGUAGE=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias vim="nvim"
-# How to get 24bit color support in Emacs
+# How to get 24bit color support in emacs
 # https://stackoverflow.com/questions/14672875/true-color-24-bit-in-terminal-emacs
 # https://github.com/syl20bnr/spacemacs/wiki/Terminal
 alias emacs="TERM=xterm-24bit emacs -nw"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 
 # Go Version Manager
 # Go Path explained: https://stackoverflow.com/questions/7970390/what-should-be-the-values-of-gopath-and-goroot
-[[ -s "/Users/skynet/.gvm/scripts/gvm" ]] && source "/Users/skynet/.gvm/scripts/gvm"
+[[ -s "/home/sammy/.gvm/scripts/gvm" ]] && source "/home/sammy/.gvm/scripts/gvm"
 export GOPATH="$HOME/code/go"
 export PATH=$PATH:$(go env GOPATH)/bin
 
@@ -111,7 +113,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # opam configuration
-test -r /Users/skynet/.opam/opam-init/init.zsh && . /Users/skynet/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r /home/sammy/.opam/opam-init/init.zsh && . /home/sammy/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
