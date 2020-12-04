@@ -66,6 +66,10 @@ This function should only modify configuration layer settings."
      haskell
      themes-megapack
      shell
+     dap
+
+     (lsp :variables lsp-rust-server 'rust-analyzer)
+     (go :variables go-backend 'lsp)
 
      ;; (shell :variables
      ;;        shell-default-height 30
