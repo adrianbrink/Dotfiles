@@ -34,3 +34,5 @@
 	required = true
 [core]
 	editor = vim
+[commit]
+  template = ~/.config/git/message

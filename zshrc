@@ -98,6 +98,14 @@ alias vim="nvim"
 # https://github.com/syl20bnr/spacemacs/wiki/Terminal
 alias emacs="TERM=xterm-24bit emacs -nw"
 
+# brew specifics completions
+#if type brew &>/dev/null; then
+#  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+#
+#  autoload -Uz compinit
+#  compinit
+#fi
+
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
@@ -111,6 +119,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 # Rustup
 export PATH="$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/library"
 
 # opam configuration
 test -r /home/sammy/.opam/opam-init/init.zsh && . /home/sammy/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -132,6 +141,10 @@ fi
 
 # Poetry for Python
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# GNU utils over BSD utils
+# https://stackoverflow.com/questions/57972341/how-to-install-and-use-gnu-ls-on-macos
+#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
